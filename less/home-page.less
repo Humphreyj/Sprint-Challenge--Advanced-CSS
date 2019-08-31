@@ -1,8 +1,28 @@
 // Home Content
 
 .home {
-  width: 80%;
+
+  // .display-flex(center,center, column);
+  @media @tablet {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media @phone {
+    width: 100%;
+  }
+   p {
+    font-weight: bold;
+  }
   .intro {
+    
+      img {
+          width: 100%;
+          margin: 0 auto;
+          @media @tablet {
+            width: 100%;
+          }
+      }
+  
 
     h2 {
       padding: 15px;
@@ -18,12 +38,21 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @tablet {
+      .mobile-hide {
+        display: none;
+      }
+      
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @tablet {
+        width: 100%;
+      }
     }
   }
 
@@ -45,9 +74,16 @@
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    @media @tablet {
+      flex-direction: column;
+    }
 
     .walk-text {
       width: 50%;
+      order: 2;
+      @media @tablet {
+        width: 100%;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -58,18 +94,38 @@
       }
 
       .btn {
-        .sign-up-btn(#111,white,none,5px,20%,2% 4%);
+        transition: all .3s ease;
+        .sign-up-btn(#111,white,none,5px,30%,3% 4%);
+        font-size: 2em;
+        &:hover {
+          .sign-up-btn(white,#111,none,5px,30%,3% 4%);
+          text-shadow: 2px 2px 2px #111;
+        }
+        @media @tablet {
+          .sign-up-btn(#111,white,none,5px,100%,7% 7%);
+          text-align: center;
+          &:hover {
+            .sign-up-btn(#111,white,none,5px,100%,7% 7%);
+          }
+
+        }
       }
     }
 
     .walk-img {
       width: 46%;
       margin-left: 4%;
+      order: 1;
+      @media @tablet {
+        width: 100%;
+        margin-left: 0%;
+      }
       
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        
       }
     }
   }
