@@ -18,6 +18,7 @@
       img {
           width: 100%;
           margin: 0 auto;
+          margin-top: 12em;
           @media @tablet {
             width: 100%;
           }
@@ -51,7 +52,11 @@
       border-radius: 20px;
       height: 100%;
       @media @tablet {
-        width: 100%;
+        width: 80%;
+        margin: 0 auto;
+      }
+      @media @phone {
+        width: 90%;
       }
     }
   }
@@ -105,9 +110,12 @@
       margin-left: 4%;
       
       @media @tablet {
-        width: 100%;
-        margin-left: 0%;
+        width: 90%;
+        margin: 0 auto;
         order: 1;
+      }
+      @media @phone {
+        width: 100%;
       }
       
       img {
@@ -129,8 +137,9 @@
     .client-info {
       .display-flex(space-evenly,center,row);
       @media @phone {
-        width: 50%;
+        
         flex-wrap: wrap;
+        .display-flex(space-evenly,center,column);
         
       }
       input {
@@ -141,7 +150,7 @@
       width: 100%;
     }
     @media @phone {
-      width: 40%;
+      width: 100%;
       
     }
 
@@ -154,7 +163,7 @@
       transition: all .3s ease;
       .sign-up-btn(#111,white,none,5px,30%,3% 4%);
       font-size: 2em;
-      margin-top: .5em;
+      margin: .5em 0em;
       &:hover {
         .sign-up-btn(white,#111,none,5px,30%,3% 4%);
         text-shadow: 2px 2px 2px #111;
