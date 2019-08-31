@@ -1,1 +1,18 @@
 // Mixins Here
+.display-flex(@justify,@align,@direction) {
+    display: flex;
+    justify-content: @justify;
+    align-items: @align;
+    flex-direction: @direction;
+}
+
+.sign-up-btn(@bg-color,@f-color,@border,@border-radius,
+@width, @padding) {
+    background-color: @bg-color;
+    color: @f-color;
+    border: @border;
+    border-radius: @border-radius;
+    width: @width;
+    padding: @padding;
+    
+}

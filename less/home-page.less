@@ -2,7 +2,28 @@
 
 .home {
 
+  // .display-flex(center,center, column);
+  @media @tablet {
+    width: 90%;
+    margin: 0 auto;
+  }
+  @media @phone {
+    width: 100%;
+  }
+   p {
+    font-weight: bold;
+  }
   .intro {
+    
+      img {
+          width: 100%;
+          margin: 0 auto;
+          margin-top: 12em;
+          @media @tablet {
+            width: 100%;
+          }
+      }
+  
 
     h2 {
       padding: 15px;
@@ -18,12 +39,25 @@
     display: flex;
     flex-wrap: wrap;
     width: 100%;
+    @media @tablet {
+      .mobile-hide {
+        display: none;
+      }
+      
+    }
 
     img {
       width: 28%;
       margin: 20px 2.5%;
       border-radius: 20px;
       height: 100%;
+      @media @tablet {
+        width: 80%;
+        margin: 0 auto;
+      }
+      @media @phone {
+        width: 90%;
+      }
     }
   }
 
@@ -40,14 +74,24 @@
   }
 
   .walk {
+    width: 100%;
     margin-top: 60px;
     border-top: 1px solid @main-border-color;
     padding: 50px 60px;
     display: flex;
     justify-content: center;
+    
+    @media @tablet {
+      flex-direction: column;
+    }
 
     .walk-text {
       width: 50%;
+      
+      @media @tablet {
+        width: 100%;
+        order: 2;
+      }
 
       h3 {
         margin-bottom: 10px;
@@ -57,7 +101,7 @@
         margin-bottom: 26px;
       }
 
-      .btn {
+      
       }
     }
 
@@ -65,11 +109,75 @@
       width: 46%;
       margin-left: 4%;
       
+      @media @tablet {
+        width: 90%;
+        margin: 0 auto;
+        order: 1;
+      }
+      @media @phone {
+        width: 100%;
+      }
+      
       img {
         width: 100%;
         height: auto;
         border-radius: 10px;
+        
       }
     }
+    
+    
   }
+  // walk
+  form {
+    text-align: center;
+    width: 90%;
+    margin: 0 auto;
+    .display-flex(center,center, column);
+    .client-info {
+      .display-flex(space-evenly,center,row);
+      @media @phone {
+        
+        flex-wrap: wrap;
+        .display-flex(space-evenly,center,column);
+        
+      }
+      input {
+        margin: 1em;
+      }
+    }
+    @media @tablet {
+      width: 100%;
+    }
+    @media @phone {
+      width: 100%;
+      
+    }
+
+    .checkbox {
+      .display-flex(space-between, center, row);
+      font-size: 1.3em;
+    }
+
+    .btn {
+      transition: all .3s ease;
+      .sign-up-btn(#111,white,none,5px,30%,3% 4%);
+      font-size: 2em;
+      margin: .5em 0em;
+      &:hover {
+        .sign-up-btn(white,#111,none,5px,30%,3% 4%);
+        text-shadow: 2px 2px 2px #111;
+      }
+      @media @tablet {
+        .sign-up-btn(#111,white,none,5px,100%,5% 5%);
+        text-align: center;
+        &:hover {
+          .sign-up-btn(#111,white,none,5px,100%,5% 5%);
+        }
+
+      }
+  }
+  // form
+  
+  
 }// home
